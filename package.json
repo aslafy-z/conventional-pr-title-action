@@ -2,7 +2,7 @@
   "name": "conventional-pr-title-action",
   "version": "0.1.0",
   "description": "Ensure your PR title matches the Conventional Commits spec.",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
     "test": "jest src"
   },
