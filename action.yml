@@ -1,0 +1,9 @@
+name: conventionnal-pr-title
+author: Zadkiel <hello@zadkiel.fr>
+description: Ensure your PR title matches the Conventional Commits spec (https://www.conventionalcommits.org/).
+runs:
+  using: node12
+  main: index.js
+branding:
+  icon: shield
+  color: green
