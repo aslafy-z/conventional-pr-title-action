@@ -12,6 +12,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: aslafy-z/conventional-pr-title@master
+      - uses: aslafy-z/conventional-pr-title-action@master
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
