@@ -32,7 +32,7 @@ async function run() {
     let state = 'success';
     let description = successState;
     if (error) {
-      state = 'pending';
+      state = 'failure';
       description = failureState;
     }
 
