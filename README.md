@@ -6,7 +6,27 @@ This is helpful when you're using [semantic-release](https://github.com/semantic
 
 See [Conventional Commits](https://www.conventionalcommits.org/) for sample titles.
 
-## How to use
+## Inputs
+
+### `success-state`
+
+**Required** Description of the status check if validation succeeds. Default `"Title follows the specification."`.
+
+### `failure-state`
+
+**Required** Description of the status check if validation fails. Default `"Title does not follow the specification."`.
+
+### `context-name`
+
+**Required** Persistent status check context key. Default `"conventional-pr-title"`.
+
+## Outputs
+
+### `success`
+
+`true` if the validation succeed. `false` otherwise.
+
+## Example usage
 
 ```yaml
 name: Check PR title

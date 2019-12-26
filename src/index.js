@@ -2,8 +2,12 @@ const core = require('@actions/core');
 const github = require('@actions/github');
 const validateTitle = require('./validateTitle');
 
-module.exports = async function run() {
+async function run() {
   try {
+    let contextName = core.getInput('context-name');
+    let successState = core.getInput('success-state');
+    let failureState = core.getInput('failure-state');
+
     const client = new github.GitHub(process.env.GITHUB_TOKEN);
 
     const contextPullRequest = github.context.payload.pull_request;
@@ -23,24 +27,26 @@ module.exports = async function run() {
       error = err;
     }
 
+    core.setOutput('success', Boolean(error).toString());
+
     let state = 'success';
-    let description = 'Title follows conventional commit.';
-    if (error) {
+    let description = successState;
+    if (!error) {
       state = 'pending';
-      description = 'Please review the PR title.';
+      description = failureState;
     }
 
-    const response = await client.request(
+    await client.request(
       'POST /repos/:owner/:repo/statuses/:sha',
       {
         owner,
         repo,
         state,
+        description,
         sha: contextPullRequest.head.sha,
         target_url: 'https://github.com/aslafy-z/conventional-pr-title-action',
-        description: 'Ready for review & merge.',
-        context: 'conventional-pr-title',
-      }
+        context: contextName,
+      },
     );
 
     if (error) {
@@ -51,3 +57,6 @@ module.exports = async function run() {
     core.setFailed(error.message);
   }
 };
+
+run();
+
