@@ -16,11 +16,11 @@ beforeAll(async (done) => {
 
 it('detects valid PR titles', async () => {
   const inputs = [
-    'fix: Fix bug',
-    'fix!: Fix bug',
-    'feat: Add feature',
-    'feat!: Add feature',
-    'refactor: Internal cleanup'
+    "fix: Fix bug",
+    "fix: Fix bug\n\nBREAKING CHANGE: Fix bug",
+    "feat: Add feature",
+    "feat: Add feature\n\nBREAKING CHANGE: Add feature",
+    "refactor: Internal cleanup"
   ];
 
   for (let index = 0; index < inputs.length; index++) {

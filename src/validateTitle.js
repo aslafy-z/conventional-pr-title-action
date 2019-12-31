@@ -1,9 +1,16 @@
 const parser = require('conventional-commits-parser').sync;
 const conventionalCommitTypes = require('conventional-commit-types');
 
+function isFunction(functionToCheck) {
+  return functionToCheck && {}.toString.call(functionToCheck) === '[object Function]';
+}
+
 module.exports = async function validateTitle(preset, title) {
-  const conventionalChangelogConfig = require(preset);
-  const { parserOpts } = await conventionalChangelogConfig();
+  let conventionalChangelogConfig = require(preset);
+  if (isFunction(conventionalChangelogConfig)) {
+    conventionalChangelogConfig = await conventionalChangelogConfig();
+  }
+  const { parserOpts } = conventionalChangelogConfig;
   const result = parser(title, parserOpts);
 
   if (!result.type) {
