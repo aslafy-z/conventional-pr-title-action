@@ -12,7 +12,7 @@ beforeAll(async (done) => {
     done.fail(err);
   }
   done();
-})
+});
 
 it('detects valid PR titles', async () => {
   const inputs = [
