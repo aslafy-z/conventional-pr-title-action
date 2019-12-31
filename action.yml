@@ -1,4 +1,4 @@
-name: conventionnal-pr-title
+name: conventional-pr-title
 author: Zadkiel <hello@zadkiel.fr>
 description: Ensure your PR title matches the Conventional Commits spec (https://www.conventionalcommits.org/).
 inputs:
@@ -14,6 +14,10 @@ inputs:
     description: Persistent status check context key
     required: true
     default: conventional-pr-title
+  preset:
+    description: Conventional changelog preset to use.
+    required: true
+    default: conventional-changelog-conventionalcommits
 runs:
   using: node12
   main: src/index.js

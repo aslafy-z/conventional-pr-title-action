@@ -1,9 +1,9 @@
 const parser = require('conventional-commits-parser').sync;
-const conventionalCommitsConfig = require('conventional-changelog-conventionalcommits');
 const conventionalCommitTypes = require('conventional-commit-types');
 
-module.exports = async function validateTitle(title) {
-  const { parserOpts } = await conventionalCommitsConfig();
+module.exports = async function validateTitle(preset, title) {
+  const conventionalChangelogConfig = require(preset);
+  const { parserOpts } = await conventionalChangelogConfig();
   const result = parser(title, parserOpts);
 
   if (!result.type) {

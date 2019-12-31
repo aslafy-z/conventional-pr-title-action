@@ -20,6 +20,10 @@ See [Conventional Commits](https://www.conventionalcommits.org/) for sample titl
 
 **Required** Persistent status check context key. Default `"conventional-pr-title"`.
 
+### `preset`
+
+**Required** Conventional changelog preset. Default `"conventional-changelog-conventionalcommits"`.
+
 ## Outputs
 
 ### `success`

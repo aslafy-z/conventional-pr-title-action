@@ -1,5 +1,6 @@
 const core = require('@actions/core');
 const github = require('@actions/github');
+const installPreset = require('./installPreset');
 const validateTitle = require('./validateTitle');
 
 async function run() {
@@ -7,6 +8,7 @@ async function run() {
     let contextName = core.getInput('context-name');
     let successState = core.getInput('success-state');
     let failureState = core.getInput('failure-state');
+    let preset = core.getInput('preset');
 
     const client = new github.GitHub(process.env.GITHUB_TOKEN);
 
@@ -22,7 +24,8 @@ async function run() {
 
     let error = null;
     try {
-      await validateTitle(contextPullRequest.title);
+      await installPreset(preset);
+      await validateTitle(preset, contextPullRequest.title);
     } catch (err) {
       error = err;
     }
@@ -58,5 +61,4 @@ async function run() {
   }
 };
 
-run();
-
+run().catch(console.error);
