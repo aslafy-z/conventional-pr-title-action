@@ -1,7 +1,7 @@
 const validateTitle = require('./validateTitle');
 const installPreset = require('./installPreset');
 
-const preset = 'conventional-changelog-conventionalcommits';
+const preset = 'conventional-changelog-angular';
 
 // Install preset (takes some time)
 jest.setTimeout(30000);
