@@ -22,7 +22,7 @@ See [Conventional Commits](https://www.conventionalcommits.org/) for sample titl
 
 ### `preset`
 
-**Required** Conventional changelog preset. Default `"conventional-changelog-conventionalcommits"`.
+**Required** Conventional changelog preset. Default `"conventional-changelog-angular"`.
 
 ## Outputs
 
@@ -51,7 +51,7 @@ jobs:
           success-state: Title follows the specification.
           failure-state: Title does not follow the specification.
           context-name: conventional-pr-title
-          preset: conventional-changelog-conventionalcommits@latest
+          preset: conventional-changelog-angular@latest
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 ```
