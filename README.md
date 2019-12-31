@@ -46,10 +46,17 @@ jobs:
   lint:
     runs-on: ubuntu-latest
     steps:
-      - uses: aslafy-z/conventional-pr-title-action@v1
+      - uses: aslafy-z/conventional-pr-title-action@master
+        with:
+          success-state: Title follows the specification.
+          failure-state: Title does not follow the specification.
+          context-name: conventional-pr-title
+          preset: conventional-changelog-conventionalcommits@latest
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 ```
+
+> Note: Avoid using `master` ref, prefer to pin the last release's SHA ref.
 
 ## Credits
 
