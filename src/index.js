@@ -9,8 +9,8 @@ async function run() {
     let contextName = core.getInput('context-name');
     let successState = core.getInput('success-state');
     let failureState = core.getInput('failure-state');
-    const installPreset = core.getInput('preset');
-    const requirePreset = npa(installPreset).name;
+    const installPresetPackage = core.getInput('preset');
+    const requirePresetPackage = npa(installPresetPackage).name;
 
     const client = new github.GitHub(process.env.GITHUB_TOKEN);
 
@@ -26,8 +26,8 @@ async function run() {
 
     let error = null;
     try {
-      await installPreset(installPreset);
-      await validateTitle(requirePreset, contextPullRequest.title);
+      await installPreset(installPresetPackage);
+      await validateTitle(requirePresetPackage, contextPullRequest.title);
     } catch (err) {
       error = err;
     }
