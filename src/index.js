@@ -1,5 +1,6 @@
 const core = require('@actions/core');
 const github = require('@actions/github');
+const npa = require('npm-package-arg');
 const installPreset = require('./installPreset');
 const validateTitle = require('./validateTitle');
 
@@ -8,7 +9,8 @@ async function run() {
     let contextName = core.getInput('context-name');
     let successState = core.getInput('success-state');
     let failureState = core.getInput('failure-state');
-    let preset = core.getInput('preset');
+    const installPreset = core.getInput('preset');
+    const requirePreset = npa(installPreset).name;
 
     const client = new github.GitHub(process.env.GITHUB_TOKEN);
 
@@ -24,8 +26,8 @@ async function run() {
 
     let error = null;
     try {
-      await installPreset(preset);
-      await validateTitle(preset, contextPullRequest.title);
+      await installPreset(installPreset);
+      await validateTitle(requirePreset, contextPullRequest.title);
     } catch (err) {
       error = err;
     }
