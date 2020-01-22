@@ -56,6 +56,8 @@ async function run() {
 
     if (error) {
       throw error;
+    } else {
+      console.log(`${state}: ${description}`);
     }
 
   } catch (error) {
