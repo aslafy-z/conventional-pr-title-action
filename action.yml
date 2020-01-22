@@ -19,8 +19,13 @@ inputs:
     required: true
     default: conventional-changelog-angular
 runs:
-  using: node12
-  main: src/index.js
+  using: docker
+  image: Dockerfile
+  args:
+    - ${{ inputs.success-state }}
+    - ${{ inputs.failure-state }}
+    - ${{ inputs.context-name }}
+    - ${{ inputs.preset }}
 branding:
   icon: shield
   color: green
