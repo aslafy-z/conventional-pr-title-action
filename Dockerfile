@@ -6,6 +6,6 @@ ADD package.json package-lock.json ./
 
 RUN npm ci
 
-ADD src ./
+ADD src ./src
 
-ENTRYPOINT ["node", "index.js"]
+ENTRYPOINT ["node", "src/index.js"]
