@@ -13,5 +13,7 @@ jobs:
 
     steps:
       - uses: aslafy-z/conventional-pr-title-action@master
+        with:
+          preset: conventional-changelog-angular@^5.0.6
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
