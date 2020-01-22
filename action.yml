@@ -17,7 +17,7 @@ inputs:
   preset:
     description: Conventional changelog preset to use.
     required: true
-    default: conventional-changelog-conventionalcommits
+    default: conventional-changelog-angular
 runs:
   using: node12
   main: src/index.js
