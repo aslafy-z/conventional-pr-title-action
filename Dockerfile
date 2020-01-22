@@ -8,4 +8,4 @@ RUN npm ci
 
 ADD src ./
 
-ENTRYPOINT ["node", "/action/src/main.js"]
+ENTRYPOINT ["node", "index.js"]
