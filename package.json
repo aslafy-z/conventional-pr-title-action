@@ -32,7 +32,7 @@
     "@semantic-release/changelog": "3.0.6",
     "@semantic-release/commit-analyzer": "7.0.0",
     "@semantic-release/git": "8.0.0",
-    "@semantic-release/github": "6.0.1",
+    "@semantic-release/github": "6.0.2",
     "@semantic-release/release-notes-generator": "7.3.5",
     "conventional-changelog-angular": "5.0.6",
     "jest": "25.1.0",
