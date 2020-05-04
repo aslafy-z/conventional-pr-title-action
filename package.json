@@ -35,7 +35,7 @@
     "@semantic-release/github": "7.0.5",
     "@semantic-release/release-notes-generator": "9.0.1",
     "conventional-changelog-angular": "5.0.6",
-    "jest": "25.5.1",
+    "jest": "26.0.0",
     "semantic-release": "17.0.4"
   },
   "engines": {
