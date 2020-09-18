@@ -12,7 +12,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: aslafy-z/conventional-pr-title-action@master
+      - name: Check out repository
+        uses: actions/checkout@v2
+
+      - uses: ./
         with:
           preset: conventional-changelog-angular@^5.0.6
         env:
