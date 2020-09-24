@@ -22,7 +22,7 @@
   },
   "homepage": "https://github.com/aslafy-z/conventional-pr-title-action#readme",
   "dependencies": {
-    "@actions/core": "^1.2.5",
+    "@actions/core": "^1.2.6",
     "@actions/github": "^2.0.0",
     "conventional-commit-types": "^3.0.0",
     "conventional-commits-parser": "^3.1.0",
