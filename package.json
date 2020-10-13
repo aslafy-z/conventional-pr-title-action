@@ -26,7 +26,7 @@
     "@actions/github": "^2.0.0",
     "conventional-commit-types": "^3.0.0",
     "conventional-commits-parser": "^3.1.0",
-    "npm-package-arg": "^8.0.1"
+    "npm-package-arg": "^8.1.0"
   },
   "devDependencies": {
     "@semantic-release/changelog": "5.0.1",
