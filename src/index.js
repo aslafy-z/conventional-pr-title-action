@@ -32,7 +32,7 @@ async function run() {
       error = err;
     }
 
-    core.setOutput('success', Boolean(error).toString());
+    core.setOutput('success', (error === null).toString());
 
     let state = 'success';
     let description = successState;
