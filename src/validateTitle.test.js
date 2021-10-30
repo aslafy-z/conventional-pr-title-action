@@ -5,13 +5,10 @@ const preset = 'conventional-changelog-angular';
 
 // Install preset (takes some time)
 jest.setTimeout(30000);
-beforeAll(async (done) => {
-  try {
-    await installPreset(preset);
-  } catch (err) {
-    done.fail(err);
-  }
-  done();
+beforeAll(async () => {
+  return new Promise(resolve => {
+    resolve(installPreset(preset))
+  });
 });
 
 it('detects valid PR titles', async () => {
