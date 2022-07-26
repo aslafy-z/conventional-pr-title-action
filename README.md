@@ -26,7 +26,7 @@ See [Conventional Commits](https://www.conventionalcommits.org/) for sample titl
 
 ### `target-url`
 
-Optional URL to be used when linking the "Details" in the actions overview.
+Optional URL to be used when linking the "Details" in the actions overview. Default `"https://github.com/aslafy-z/conventional-pr-title-action"`.
 
 ## Outputs
 
