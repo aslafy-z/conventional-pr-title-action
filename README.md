@@ -26,7 +26,7 @@ See [Conventional Commits](https://www.conventionalcommits.org/) for sample titl
 
 ### `target-url`
 
-Optional URL to be used when linking the "Details" in the actions overview. Default `"https://github.com/aslafy-z/conventional-pr-title-action"`.
+**Optional** URL to be used when linking the "Details" in the actions overview. Default `"https://github.com/aslafy-z/conventional-pr-title-action"`.
 
 ## Outputs
 
@@ -54,7 +54,7 @@ jobs:
   lint:
     runs-on: ubuntu-latest
     steps:
-      - uses: aslafy-z/conventional-pr-title-action@v2.2.5
+      - uses: aslafy-z/conventional-pr-title-action@v2.4.0
         with:
           success-state: Title follows the specification.
           failure-state: Title does not follow the specification.
