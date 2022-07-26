@@ -61,6 +61,7 @@ async function run() {
     }
 
   } catch (error) {
+    core.setOutput('error', error.message);
     core.setFailed(error.message);
   }
 };

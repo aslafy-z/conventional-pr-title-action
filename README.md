@@ -30,6 +30,10 @@ See [Conventional Commits](https://www.conventionalcommits.org/) for sample titl
 
 `true` if the validation succeed. `false` otherwise.
 
+### `error`
+
+In case of an error (`success=false`), contains the error message for additional processing or usage in notifications.
+
 ## Example usage
 
 ```yaml
