@@ -32,7 +32,7 @@ See [Conventional Commits](https://www.conventionalcommits.org/) for sample titl
 
 ### `error`
 
-In case of an error (success=false) contains the error message for additional processing or usage in notifications.
+In case of an error (`success=false`), contains the error message for additional processing or usage in notifications.
 
 ## Example usage
 
