@@ -18,6 +18,10 @@ inputs:
     description: Conventional changelog preset to use.
     required: true
     default: conventional-changelog-angular
+  target-url:
+    description: URL to be used when linking the "Details" in the actions overview.
+    required: false
+    default: https://github.com/aslafy-z/conventional-pr-title-action
 runs:
   using: docker
   image: Dockerfile
