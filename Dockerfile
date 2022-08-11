@@ -1,4 +1,4 @@
-FROM node:17-alpine
+FROM node:16.16-alpine
 
 ADD package.json package-lock.json /action/
 RUN cd /action && npm ci
