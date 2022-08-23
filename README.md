@@ -54,7 +54,7 @@ jobs:
   lint:
     runs-on: ubuntu-latest
     steps:
-      - uses: aslafy-z/conventional-pr-title-action@v2.4.0
+      - uses: aslafy-z/conventional-pr-title-action@v2
         with:
           success-state: Title follows the specification.
           failure-state: Title does not follow the specification.
@@ -64,7 +64,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 ```
 
-> Note: Avoid using `master` ref, prefer to pin the last release's SHA ref.
+> Note: Avoid using `main` ref, prefer to pin the last release's SHA ref.
 
 ## Credits
 
