@@ -13,7 +13,7 @@ async function run() {
     const installPresetPackage = core.getInput('preset');
     const requirePresetPackage = npa(installPresetPackage).name;
 
-    const client = new github.GitHub(process.env.GITHUB_TOKEN);
+    const client = new github.getOctokit(process.env.GITHUB_TOKEN);
 
     const contextPullRequest = github.context.payload.pull_request;
     if (!contextPullRequest) {
