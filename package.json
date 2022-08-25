@@ -7,10 +7,6 @@
     "test": "jest src",
     "release": "semantic-release"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/aslafy-z/conventional-pr-title-action.git"
-  },
   "keywords": [
     "github-action",
     "conventional-commits"
