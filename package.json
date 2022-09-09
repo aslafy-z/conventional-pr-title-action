@@ -30,7 +30,7 @@
   },
   "devDependencies": {
     "conventional-changelog-angular": "^5.0.13",
-    "jest": "29.0.0"
+    "jest": "29.0.2"
   },
   "engines": {
     "node": ">= 16.16.0"
