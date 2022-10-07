@@ -13,6 +13,9 @@ jobs:
           token: ${{ secrets.PAT_TOKEN }}
       - uses: cycjimmy/semantic-release-action@v3
         id: semantic
+        with:
+          extra_plugins: |
+            conventional-changelog-conventionalcommits@latest
         env:
           GITHUB_TOKEN: ${{ secrets.PAT_TOKEN }}
       - name: Push updates to branch for major version
