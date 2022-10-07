@@ -43,7 +43,7 @@ In case of an error (`success=false`), contains the error message for additional
 ```yaml
 name: Check PR title
 on:
-  pull_request:
+  pull_request_target:
     types:
       - opened
       - reopened
@@ -54,12 +54,7 @@ jobs:
   lint:
     runs-on: ubuntu-latest
     steps:
-      - uses: aslafy-z/conventional-pr-title-action@v2
-        with:
-          success-state: Title follows the specification.
-          failure-state: Title does not follow the specification.
-          context-name: conventional-pr-title
-          preset: conventional-changelog-conventionalcommits@5.0.0
+      - uses: aslafy-z/conventional-pr-title-action@v3
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 ```
