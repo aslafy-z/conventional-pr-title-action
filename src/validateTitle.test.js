@@ -1,7 +1,7 @@
 const validateTitle = require('./validateTitle');
 const installPreset = require('./installPreset');
 
-const preset = 'conventional-changelog-angular';
+const preset = 'conventional-changelog-conventionalcommits';
 
 // Install preset (takes some time)
 jest.setTimeout(30000);
@@ -17,7 +17,8 @@ it('detects valid PR titles', async () => {
     "fix: Fix bug\n\nBREAKING CHANGE: Fix bug",
     "feat: Add feature",
     "feat: Add feature\n\nBREAKING CHANGE: Add feature",
-    "refactor: Internal cleanup"
+    "refactor: Internal cleanup",
+    "feat!: Add feature with breaking change"
   ];
 
   for (let index = 0; index < inputs.length; index++) {

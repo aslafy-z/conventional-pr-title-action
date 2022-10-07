@@ -9,7 +9,7 @@ async function run() {
     let contextName = core.getInput('context-name');
     let successState = core.getInput('success-state');
     let failureState = core.getInput('failure-state');
-    let targetUrl = core.getInput('target-url') || 'https://github.com/aslafy-z/conventional-pr-title-action';
+    let targetUrl = core.getInput('target-url');
     const installPresetPackage = core.getInput('preset');
     const requirePresetPackage = npa(installPresetPackage).name;
 

@@ -8,10 +8,9 @@ const exec = util.promisify(require('child_process').exec);
  * @returns {Promise<void>}
  */
 module.exports = async (preset) => {
-  const {stdout, stderr} = await exec(`npm install ${preset}`, {
+  const {stdout, stderr} = await exec(`npm install --quiet ${preset}`, {
     cwd: path.resolve(__dirname)
   });
-  core.debug(stdout);
   core.debug(stderr);
   return Promise.resolve();
 };

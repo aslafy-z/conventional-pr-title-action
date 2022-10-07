@@ -22,11 +22,11 @@ See [Conventional Commits](https://www.conventionalcommits.org/) for sample titl
 
 ### `preset`
 
-**Required** Conventional changelog preset. Default `"conventional-changelog-angular"`.
+**Required** Conventional changelog preset. Default `"conventional-changelog-conventionalcommits@5.0.0"`.
 
 ### `target-url`
 
-**Optional** URL to be used when linking the "Details" in the actions overview. Default `"https://github.com/aslafy-z/conventional-pr-title-action"`.
+**Optional** URL to be used when linking the "Details" in the actions overview. Default `"https://www.conventionalcommits.org/en/v1.0.0/#summary"`.
 
 ## Outputs
 
@@ -59,7 +59,7 @@ jobs:
           success-state: Title follows the specification.
           failure-state: Title does not follow the specification.
           context-name: conventional-pr-title
-          preset: conventional-changelog-angular@latest
+          preset: conventional-changelog-conventionalcommits@5.0.0
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 ```
