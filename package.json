@@ -27,7 +27,7 @@
     "conventional-changelog-conventionalcommits": "^5.0.0",
     "conventional-commit-types": "^3.0.0",
     "conventional-commits-parser": "^3.2.4",
-    "npm-package-arg": "^10.0.0"
+    "npm-package-arg": "^10.1.0"
   },
   "devDependencies": {
     "jest": "29.3.0"
