@@ -30,7 +30,7 @@
     "npm-package-arg": "^10.0.0"
   },
   "devDependencies": {
-    "jest": "29.3.0"
+    "jest": "29.4.1"
   },
   "engines": {
     "node": ">= 16.16.0"
