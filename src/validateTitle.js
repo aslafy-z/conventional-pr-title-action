@@ -17,7 +17,7 @@ module.exports = async function validateTitle(preset, title) {
 
   if (!result.type) {
     throw new Error(
-      `No release type found in pull request title "${title}". The title should match the commit mesage format as specified by https://www.conventionalcommits.org/.` +
+      `No release type found in pull request title "${title}". The title should match the commit message format as specified by https://www.conventionalcommits.org/. The functionalities can also be altered by the selected preset plugin (${preset}). ` +
       `\n\nPlease use one of these recognized types: ${allowedTypes.join(
         ', '
       )}.`
