@@ -53,6 +53,8 @@ on:
 jobs:
   lint:
     runs-on: ubuntu-latest
+    permissions:
+      statuses: write
     steps:
       - uses: aslafy-z/conventional-pr-title-action@v3
         env:
