@@ -24,7 +24,7 @@ inputs:
     default: https://www.conventionalcommits.org/en/v1.0.0/#summary
 runs:
   using: docker
-  image: Dockerfile
+  image: docker://ghcr.io/aslafy-z/conventional-pr-title-action
 branding:
   icon: shield
   color: green
