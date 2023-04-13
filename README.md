@@ -1,8 +1,8 @@
-# conventional-pr-title-action
+# Conventional PR Title Action
 
-This is a [Github Action](https://github.com/features/actions) that ensures that your PR title matches the [Conventional Commits spec](https://www.conventionalcommits.org/).
+This is a [GitHub Action](https://github.com/features/actions) that ensures your PR title matches the [Conventional Commits spec](https://www.conventionalcommits.org/).
 
-This is helpful when you're using [semantic-release](https://github.com/semantic-release/semantic-release) with the Conventional Commits preset. When using the `Squash and merge` strategy, Github will suggest to use the PR title as the commit message. With this action you can validate that the PR title will lead to a correct commit message.
+This is helpful when you're using [semantic-release](https://github.com/semantic-release/semantic-release) with the Conventional Commits preset. When using the `Squash and merge` strategy, GitHub will suggest to use the PR title as the commit message. With this action you can validate that the PR title will lead to a correct commit message.
 
 See [Conventional Commits](https://www.conventionalcommits.org/) for sample titles.
 
@@ -10,34 +10,34 @@ See [Conventional Commits](https://www.conventionalcommits.org/) for sample titl
 
 ### `success-state`
 
-**Optional** Description of the status check if validation succeeds.
+**Optional.** Description of the status check if validation succeeds.
 > Default: `"Title follows the specification."`.
 
 ### `failure-state`
 
-**Optional** Description of the status check if validation fails.
+**Optional.** Description of the status check if validation fails.
 > Default: `"Title does not follow the specification."`.
 
 ### `context-name`
 
-**Optional** Persistent status check context key. 
+**Optional.** Persistent status check context key. 
 > Default: `"conventional-pr-title"`.
 
 ### `preset`
 
-**Optional** Conventional changelog preset.
+**Optional.** Conventional changelog preset.
 > Default: `"conventional-changelog-conventionalcommits@5.0.0"`.
 
 ### `target-url`
 
-**Optional** URL to be used when linking the "Details" in the actions overview.
+**Optional.** URL to be used when linking the "Details" in the actions overview.
 > Default: `"https://www.conventionalcommits.org/en/v1.0.0/#summary"`.
 
 ## Outputs
 
 ### `success`
 
-`true` if the validation succeed. `false` otherwise.
+`true` if the validation succeed, `false` otherwise.
 
 ### `error`
 
@@ -47,6 +47,7 @@ In case of an error (`success=false`), contains the error message for additional
 
 ```yaml
 name: Check PR title
+
 on:
   pull_request_target:
     types:
@@ -66,7 +67,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 ```
 
-> Note: Avoid using `main` ref, prefer to pin the last release's SHA ref.
+> Note: Avoid using `main` ref, prefer to pin to a specific version.
 
 ## Credits
 
