@@ -17,6 +17,9 @@ it('detects valid PR titles', async () => {
     "fix: Fix bug\n\nBREAKING CHANGE: Fix bug",
     "feat: Add feature",
     "feat: Add feature\n\nBREAKING CHANGE: Add feature",
+    "feat(scope): Add feature",
+    "feat(scope): Add feature\n\nBREAKING CHANGE: Add feature",
+    "feat(scope)!: Add feature with breaking change",
     "refactor: Internal cleanup",
     "feat!: Add feature with breaking change"
   ];
