@@ -36,7 +36,6 @@ jobs:
         with:
           extra_plugins: |
             conventional-changelog-conventionalcommits@latest
-            @semantic-release/exec@6.0.3
         env:
           GITHUB_TOKEN: ${{ secrets.PAT_TOKEN }}
 
