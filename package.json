@@ -1,11 +1,12 @@
 {
   "name": "conventional-pr-title-action",
-  "version": "0.1.0",
+  "version": "3.1.0",
   "description": "Ensure your PR title matches the Conventional Commits spec.",
   "main": "src/index.js",
   "scripts": {
     "test": "jest src",
-    "release": "semantic-release"
+    "release": "semantic-release",
+    "build": "ncc build src/index.js -o dist -m"
   },
   "repository": {
     "type": "git",
@@ -30,6 +31,7 @@
     "npm-package-arg": "^10.1.0"
   },
   "devDependencies": {
+    "@vercel/ncc": "^0.36.1",
     "jest": "29.6.2"
   },
   "engines": {
