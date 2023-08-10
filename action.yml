@@ -23,8 +23,8 @@ inputs:
     required: false
     default: https://www.conventionalcommits.org/en/v1.0.0/#summary
 runs:
-  using: node16
-  main: dist/index.js
+  using: docker
+  image: Dockerfile
 branding:
   icon: shield
   color: green
