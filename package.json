@@ -4,6 +4,7 @@
   "description": "Ensure your PR title matches the Conventional Commits spec.",
   "main": "src/index.js",
   "scripts": {
+    "build": "ncc build src/index.js -o dist",
     "test": "jest src",
     "release": "semantic-release"
   },
@@ -30,6 +31,7 @@
     "npm-package-arg": "^10.1.0"
   },
   "devDependencies": {
+    "@vercel/ncc": "^0.36.1",
     "jest": "29.6.2"
   },
   "engines": {
