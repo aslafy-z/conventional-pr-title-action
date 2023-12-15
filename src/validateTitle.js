@@ -27,9 +27,9 @@ module.exports = async function validateTitle(preset, title, scopeRequired) {
   if (!allowedTypes.includes(result.type)) {
     throw new Error(
       `Unknown release type "${result.type}" found in pull request title "${title}".` +
-      `\n\nPlease use one of these recognized types: ${allowedTypes.join(
-        ', '
-      )}.`
+        `\n\nPlease use one of these recognized types: ${allowedTypes.join(
+          ', '
+        )}.`
     );
   }
 
