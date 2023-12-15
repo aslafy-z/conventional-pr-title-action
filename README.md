@@ -33,6 +33,11 @@ See [Conventional Commits](https://www.conventionalcommits.org/) for sample titl
 **Optional.** URL to be used when linking the "Details" in the actions overview.
 > Default: `"https://www.conventionalcommits.org/en/v1.0.0/#summary"`.
 
+### `scope-required`
+
+**Optional.** Set to `true` if you want to fail in case the scope isn't set.
+> Default: `false`.
+
 ## Outputs
 
 ### `success`

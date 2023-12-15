@@ -41,3 +41,9 @@ it('throws for PR titles with an unknown type', async () => {
     /Unknown release type "foo" found in pull request title "foo: Bar"./
   );
 });
+
+it('throws for PR titles without a scope when its required', async () => {
+  await expect(validateTitle(preset, 'feat: Add feature', true)).rejects.toThrow(
+    /No scope found in pull request title "feat: Add feature" but it's required./
+  );
+});

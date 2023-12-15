@@ -23,7 +23,7 @@ inputs:
     required: false
     default: https://www.conventionalcommits.org/en/v1.0.0/#summary
   scope-required:
-    description: Set to true if you want to fail in case the scope isn't set
+    description: Set to true if you want to fail in case the scope isn't set.
     required: false
     default: false
     type: boolean
