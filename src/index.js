@@ -10,8 +10,8 @@ async function run() {
     let successState = core.getInput('success-state');
     let failureState = core.getInput('failure-state');
     let targetUrl = core.getInput('target-url');
-    let scopeRequired = core.getInput("scope-required");
-    const installPresetPackage = core.getInput("preset");
+    let scopeRequired = core.getInput('scope-required');
+    const installPresetPackage = core.getInput('preset');
     const requirePresetPackage = npa(installPresetPackage).name;
 
     const client = new github.getOctokit(process.env.GITHUB_TOKEN);
