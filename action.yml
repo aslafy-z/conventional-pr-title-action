@@ -17,7 +17,7 @@ inputs:
   preset:
     description: Conventional changelog preset to use.
     required: false
-    default: conventional-changelog-conventionalcommits@5.0.0
+    default: conventional-changelog-conventionalcommits@7
   target-url:
     description: URL to be used when linking the "Details" in the actions overview.
     required: false
