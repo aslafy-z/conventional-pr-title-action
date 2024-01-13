@@ -6,6 +6,12 @@ This is helpful when you're using [semantic-release](https://github.com/semantic
 
 See [Conventional Commits](https://www.conventionalcommits.org/) for sample titles.
 
+## Important Notice: This repository has been archived
+
+Please note that no further updates or developments are planned for this repository in the future. The implementation and functionality constraints associated with the `conventional-changelog` packages and the limitations in the data extraction process have led to this decision. For those seeking a maintained and active alternative with mostly similar functionalities, it is recommended to switch to [`amannn/action-semantic-pull-request`](https://github.com/amannn/action-semantic-pull-request).
+
+Thank you for your support and understanding.
+
 ## Inputs
 
 ### `success-state`
